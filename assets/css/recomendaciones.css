@@ -1,0 +1,570 @@
+/* VARIABLES DE LA PALETA DE COLORES ENVIADA */
+:root {
+    --bg-main: #0B0C1E;         /* Fondo Principal: Azul/morado medianoche */
+    --bg-card: #13132B;         /* Fondo de Tarjetas, Bloques y Navbar */
+    --action-primary: #7B5CB7;  /* Color de Acción Principal (Botones) */
+    --action-contrast: #A488D9; /* Lila de Contraste (Iconos y Hoover) */
+    --mystic-gold: #E8C39E;     /* Dorado/Crema Místico (Subtítulo y detalles) */
+    --text-headings: #FFFFFF;   /* Blanco Puro para Títulos */
+    --text-paragraphs: #A6A7BC; /* Gris Lavanda para textos generales */
+}
+
+/* REGLAS GENERALES*/
+body {
+    background-color: var(--bg-main);
+    color: var(--text-paragraphs);
+    font-family: system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-main {
+    max-width: 800px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.main-heading, .sub-heading {
+    color: var(--text-headings);
+}
+
+.custom-paragraph {
+    color: var(--text-paragraphs);
+}
+
+.icon-contrast {
+    color: var(--action-contrast);
+}
+
+.arrow-divider {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--action-contrast);
+}
+
+/* VARIABLES DE LA PALETA DE COLORES ENVIADA */
+:root {
+    --bg-main: #0B0C1E;         /* Fondo Principal */
+    --bg-card: #13132B;         /* Fondo de Tarjetas y Navbar */
+    --action-primary: #7B5CB7;  /* Acción Principal (Botones) */
+    --action-contrast: #A488D9; /* Iconos y Hovers */
+    --mystic-gold: #E8C39E;     /* etalles y Subtítulos */
+    --text-headings: #FFFFFF;   /*  Títulos Principales */
+    --text-paragraphs: #A6A7BC; /* textos generales */
+}
+
+/* BARRA DE NAVEGACIÓN*/
+.navbar-lunaris {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 90%;
+    margin: 20px auto;
+    padding: 15px 35px;
+
+    background: #13132B;
+    border-radius: 20px;
+    border: 1px solid rgba(59, 49, 75, 0.332); 
+    box-shadow: 0 4px 16px #A6A7BC;   
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 100px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.Titulo h1 {
+    font-size: 28px;
+    color: #E8C39E; /* Dorado/Crema Místico */
+    margin: 0;
+}
+
+.Titulo p {
+    font-size: 12px;
+    color: #E8C39E; /* Dorado/Crema Místico */
+    margin: 0;
+}
+
+/* Menú principal */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #E8C39E; /* Gris Lavanda */
+    font-weight: 500;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: var(--action-contrast); /* Lila de Contraste */
+}
+
+/* Categorías (Dropdown flotante animado) */
+.Drop-Categorias {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Drop-Categorias::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 15px;
+}
+
+.drop-content {
+    position: absolute;
+
+    top: calc(100% + 15px);
+    left: 50%;
+
+    transform: translateX(-50%) translateY(10px);
+
+    display: flex;
+    gap: 50px;
+
+    min-width: 600px;
+    padding: 25px 30px;
+
+    background: var(--bg-card); /* Fondo oscuro de tarjeta */
+    border: 1px solid rgba(164, 136, 217, 0.2); /* Borde lila */
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .6);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all .25s ease;
+
+    z-index: 999;
+}
+
+/* Mostrar menú */
+.Drop-Categorias:hover .drop-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Columnas internas del Dropdown */
+.columna {
+    display: flex;
+    flex-direction: column;
+    min-width: 140px;
+}
+
+/* Nota: Cambié .columna h4 por h2 para emparejarlo con tu HTML original */
+.columna h2 {
+    margin-bottom: 12px;
+    color: var(--mystic-gold); /* Dorado/Crema Místico para los títulos de sección */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.columna a {
+    padding: 6px 0;
+    color: var(--text-paragraphs); /* Gris Lavanda */
+    transition: .2s;
+}
+
+.columna a:hover {
+    color: var(--text-headings); /* Blanco Puro al pasar el cursor */
+    transform: translateX(4px);
+}
+
+/* Estilos para el buscador */
+.buscador {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.buscador input {
+    width: 220px;
+    padding: 10px 18px;
+
+    border: 1px solid rgba(164, 136, 217, 0.2);
+    border-radius: 30px;
+
+    background: var(--bg-main); /* Fondo medianoche más oscuro para la barra */
+    color: var(--text-headings);
+    outline: none;
+
+    transition: .3s;
+}
+
+.buscador input::placeholder {
+    color: rgba(166, 167, 188, 0.5); /* Placeholder lavado */
+}
+
+.buscador input:focus {
+    background: var(--bg-main);
+    border-color: var(--action-contrast);
+    box-shadow: 0 0 0 2px var(--action-contrast); /* Brillo lila al enfocar */
+}
+
+.buscador i {
+    font-size: 28px;
+    color: var(--text-headings); /* Blanco Puro para el icono de usuario */
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buscador i:hover {
+    color: var(--action-contrast); /* Cambia a Lila de contraste */
+}
+
+/* ==========================================
+   MEGA-DROPDOWN DE CATEGORÍAS
+   ========================================= */
+.Drop-Categorias {
+    position: relative;
+}
+
+.drop-content {
+    display: none;
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-card);
+    border: 1px solid rgba(164, 136, 217, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    z-index: 1000;
+    padding: 1.5rem;
+    gap: 2rem;
+    border-radius: 0.5rem;
+}
+
+.Drop-Categorias:hover .drop-content {
+    display: flex;
+}
+
+.drop-content .columna h2 {
+    font-size: 0.95rem;
+    color: var(--mystic-gold);
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(232, 195, 158, 0.2);
+    padding-bottom: 0.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.drop-content .columna a {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-paragraphs);
+    padding: 0.25rem 0;
+}
+
+.drop-content .columna a:hover {
+    color: var(--text-headings);
+    padding-left: 4px;
+}
+
+/* ==========================================
+   RESTO DE COMPONENTES (Mantenidos)
+   ========================================== */
+.custom-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(164, 136, 217, 0.15);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.custom-accordion .accordion-item {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(164, 136, 217, 0.2);
+    margin-bottom: 0.5rem;
+    border-radius: 0.375rem !important;
+    overflow: hidden;
+}
+
+.custom-accordion .accordion-button {
+    background-color: var(--bg-card);
+    color: var(--text-headings);
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: rgba(123, 92, 183, 0.15);
+    color: var(--mystic-gold);
+}
+
+.custom-accordion .accordion-button::after {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(230deg);
+}
+
+.custom-accordion .accordion-body {
+    background-color: rgba(11, 12, 30, 0.4);
+    color: var(--text-paragraphs);
+    border-top: 1px solid rgba(164, 136, 217, 0.1);
+}
+
+.custom-label {
+    color: var(--mystic-gold);
+    font-weight: 500;
+}
+
+.custom-input {
+    background-color: var(--bg-main) !important;
+    border: 1px solid rgba(164, 136, 217, 0.3) !important;
+    color: var(--text-headings) !important;
+}
+
+.custom-input:focus {
+    border-color: var(--action-contrast) !important;
+    box-shadow: 0 0 0 0.25rem rgba(164, 136, 217, 0.25) !important;
+}
+
+.custom-input::placeholder {
+    color: rgba(166, 167, 188, 0.5);
+}
+
+.custom-input option {
+    background-color: var(--bg-card);
+    color: var(--text-headings);
+}
+
+.btn-action-primary {
+    background-color: var(--action-primary);
+    color: var(--text-headings);
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-action-primary:hover {
+    background-color: #6546A3;
+    color: var(--text-headings);
+}
+
+.btn-action-secondary {
+    background-color: transparent;
+    color: var(--action-contrast);
+    border: 1px solid var(--action-contrast);
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-action-secondary:hover {
+    background-color: var(--action-contrast);
+    color: var(--bg-main);
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: var(--text-paragraphs);
+    border: 1px solid rgba(166, 167, 188, 0.4);
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-cancel:hover {
+    background-color: rgba(166, 167, 188, 0.1);
+    color: var(--text-headings);
+}
+
+.custom-footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid rgba(164, 136, 217, 0.2);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+.footer-logo-box {
+    border: 1px dashed var(--action-contrast);
+    padding: 1rem;
+    width: 120px;
+    height: 120px;
+    color: var(--action-contrast);
+    display: inline-block;
+}
+
+.footer-title {
+    color: var(--text-headings);
+}
+
+.footer-subtitle {
+    color: var(--mystic-gold);
+}
+
+.footer-section-title {
+    color: var(--text-headings);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--text-paragraphs);
+}
+
+.footer-link:hover {
+    color: var(--action-contrast);
+}
+
+.footer-placeholder-list {
+    color: rgba(166, 167, 188, 0.3);
+}
+.custom-card {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(164, 136, 217, 0.15);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+.custom-accordion .accordion-item {
+    background-color: var(--bg-card);
+    border: 1px solid rgba(164, 136, 217, 0.2);
+    margin-bottom: 0.5rem;
+    border-radius: 0.375rem !important;
+    overflow: hidden;
+}
+
+.custom-accordion .accordion-button {
+    background-color: var(--bg-card);
+    color: var(--text-headings);
+    box-shadow: none;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+    background-color: rgba(123, 92, 183, 0.15);
+    color: var(--mystic-gold);
+}
+
+.custom-accordion .accordion-button::after {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(230deg);
+}
+
+.custom-accordion .accordion-body {
+    background-color: rgba(11, 12, 30, 0.4);
+    color: var(--text-paragraphs);
+    border-top: 1px solid rgba(164, 136, 217, 0.1);
+}
+
+.custom-label {
+    color: var(--mystic-gold);
+    font-weight: 500;
+}
+
+.custom-input {
+    background-color: var(--bg-main) !important;
+    border: 1px solid rgba(164, 136, 217, 0.3) !important;
+    color: var(--text-headings) !important;
+}
+
+.custom-input:focus {
+    border-color: var(--action-contrast) !important;
+    box-shadow: 0 0 0 0.25rem rgba(164, 136, 217, 0.25) !important;
+}
+
+.custom-input::placeholder {
+    color: rgba(166, 167, 188, 0.5);
+}
+
+.custom-input option {
+    background-color: var(--bg-card);
+    color: var(--text-headings);
+}
+
+.btn-action-primary {
+    background-color: var(--action-primary);
+    color: var(--text-headings);
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-action-primary:hover {
+    background-color: #6546A3;
+    color: var(--text-headings);
+}
+
+.btn-action-secondary {
+    background-color: transparent;
+    color: var(--action-contrast);
+    border: 1px solid var(--action-contrast);
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-action-secondary:hover {
+    background-color: var(--action-contrast);
+    color: var(--bg-main);
+}
+
+.btn-cancel {
+    background-color: transparent;
+    color: var(--text-paragraphs);
+    border: 1px solid rgba(166, 167, 188, 0.4);
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-cancel:hover {
+    background-color: rgba(166, 167, 188, 0.1);
+    color: var(--text-headings);
+}
+
+.custom-footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid rgba(164, 136, 217, 0.2);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 5rem;
+}
+
+.footer-logo-box {
+    border: 1px dashed var(--action-contrast);
+    padding: 1rem;
+    width: 120px;
+    height: 120px;
+    color: var(--action-contrast);
+    display: inline-block;
+}
+
+.footer-title {
+    color: var(--text-headings);
+}
+
+.footer-subtitle {
+    color: var(--mystic-gold);
+}
+
+.footer-section-title {
+    color: var(--text-headings);
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--text-paragraphs);
+}
+
+.footer-link:hover {
+    color: var(--action-contrast);
+}
+
+.footer-placeholder-list {
+    color: rgba(166, 167, 188, 0.3);
+}
