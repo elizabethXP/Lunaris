@@ -191,6 +191,69 @@
     border: 3px solid #731186;
 }
 
+/* Icono de perfil en la barra de navegación */
+
+.icono-perfil{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #731186;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icono-perfil:hover{
+    transform: scale(1.1);
+    border-color: #7B5CB7;
+}
+
+/* Actividad */
+
+.card-actividad{
+    background-color: #13132B;
+    border: 1px solid #7B5CB7;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+.item-actividad{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(123,92,183,.3);
+}
+
+.item-actividad:last-child{
+    border-bottom: none;
+}
+
+.item-actividad i{
+    color: #C8B6FF;
+    font-size: 1.4rem;
+    min-width: 20px;
+    text-align: center;
+}
+
+.item-actividad p{
+    margin: 0;
+    color: #FFFFFF;
+}
+
+/* Separación entre Actividad y Footer */
+
+#actividad{
+    margin-bottom: 80px;
+}
+
+/* Footer */
+
+footer{
+    margin-top: 50px;
+    padding: 30px 0;
+}
 
 /* Títulos de secciones */
 
