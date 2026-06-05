@@ -456,15 +456,21 @@ section h2{
     font-weight: 700;
 }
 
-/* Responsive */
+/* Responsividad */
 @media (max-width: 768px) {
-    .drop-content {
-        min-width: 100%;
-        left: 0;
-        transform: translateX(0) translateY(10px);
+    
+    .navbar-lunaris {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .Drop-Categorias:hover .drop-content {
-        transform: translateX(0) translateY(0);
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Drop-Categorias .drop-content {
+        left: 0;
+        transform: translateX(0) translateY(10px);
     }
 }
