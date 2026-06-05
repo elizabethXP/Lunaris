@@ -318,3 +318,31 @@ body {
 .footer-placeholder-list {
     color: rgba(166, 167, 188, 0.3);
 }
+
+#carousel-SubCategorias {
+    max-height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+#carousel-SubCategorias img {
+    height: 350px;
+    object-fit: cover; /* tipo banner */
+}
+
+/* Oscurecer un poco para que se vea más elegante */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+/* Botones más visibles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    padding: 15px;
+}
