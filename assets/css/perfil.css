@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-main: #0B0C1E;         /* Fondo Principal: Azul/morado medianoche */
+    --bg-card: #13132B;         /* Fondo de Tarjetas, Bloques y Navbar */
+    --action-primary: #7B5CB7;  /* Color de Acción Principal (Botones) */
+    --action-contrast: #A488D9; /* Lila de Contraste (Iconos y Hoover) */
+    --mystic-gold: #E8C39E;     /* Dorado/Crema Místico (Subtítulo y detalles) */
+    --text-headings: #FFFFFF;   /* Blanco Puro para Títulos */
+    --text-paragraphs: #A6A7BC; /* Gris Lavanda para textos generales */
+}
+
 body{
     background-color: #0B0C1E;
     color: white;
