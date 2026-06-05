@@ -24,6 +24,10 @@
                     </div>
                 </div>
 
+                <div class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
                 <ul class="menu">
                     <li><a href="index.html">Inicio</a></li>
 
@@ -38,6 +42,9 @@
                                 <a href="#">Seinen</a>
                                 <a href="#">Isekai</a>
                                 <a href="#">Romance</a>
+                                <a href="#">Escolar</a>
+                                <a href="#">Historico</a>
+                                <a href="#">Deportes</a>
                             </div>
 
                             <div class="columna">
@@ -46,14 +53,31 @@
                                 <a href="#">Fantasía</a>
                                 <a href="#">Terror</a>
                                 <a href="#">Comedia</a>
+                                <a href="#">Romance</a>
+                                <a href="#">Reencarnación</a>
+                                <a href="#">Misterio</a> 
                             </div>
 
                             <div class="columna">
-                                <h2>Merchandising</h2>
-                                <a href="#">Figuras</a>
-                                <a href="#">Pósters</a>
-                                <a href="#">Llaveros</a>
-                                <a href="#">Ropas</a>
+                                <h2>Manhwa</h2>
+                                <a href="#">Fiction</a>
+                                <a href="#">Romance</a>
+                                <a href="#">Drama</a>
+                                <a href="#">Reencarnación</a>
+                                <a href="#">Misterio</a>
+                                <a href="#">Fantasía</a>
+                                <a href="#">Acción</a>
+                            </div>
+
+                            <div class="columna">
+                                    <h2>Literatura</h2>
+                                    <a href="#">Novelas</a>
+                                    <a href="#">Cuentos</a>
+                                    <a href="#">Poemas</a>
+                                    <a href="#">Fantasía</a>
+                                    <a href="#">Cronica</a>
+                                    <a href="#">Misterio</a>
+                                    <a href="#">Fanfiction</a>
                             </div>
 
                         </div>
@@ -297,5 +321,27 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+
+<script>
+document.querySelectorAll(".columna h2").forEach(titulo => {
+
+    titulo.addEventListener("click", () => {
+
+        const columna = titulo.parentElement;
+
+        columna.classList.toggle("active");
+
+    });
+
+});
+</script>
 </body>
 </html>
