@@ -277,72 +277,50 @@ body {
 
 /* Footer */
 
-.custom-footer {
-    background-color: var(--bg-card);
-    border-top: 1px solid rgba(164, 136, 217, 0.2);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    margin-top: 5rem;
+footer{
+    margin-top: 50px;
+    padding: 30px 0;
 }
 
-.footer-logo-box {
-    border: 1px dashed var(--action-contrast);
-    padding: 1rem;
-    width: 120px;
-    height: 120px;
-    color: var(--action-contrast);
-    display: inline-block;
+section h2{
+    color: #7B5CB7;
+    font-weight: 700;
+}
+.soporte-container {
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
-.footer-title {
-    color: var(--text-headings);
-}
-
-.footer-subtitle {
-    color: var(--mystic-gold);
-}
-
-.footer-section-title {
-    color: var(--text-headings);
-}
-
-.footer-link {
+.btn-soporte {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+    padding: 8px 16px;
+    background-color: #2b1b4d; 
+    color: #cda4fc !important; 
+    border: 1px solid #5a379d; 
+    border-radius: 20px; 
     text-decoration: none;
-    color: var(--text-paragraphs);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(43, 27, 77, 0.3);
 }
 
-.footer-link:hover {
-    color: var(--action-contrast);
+/* Efecto al pasar el cursor (Hover) */
+.btn-soporte:hover {
+    background-color: #3d256c; 
+    color: #ffffff !important;
+    border-color: #a267ff; 
+    box-shadow: 0 4px 12px rgba(162, 103, 255, 0.4); 
+    transform: translateY(-2px); 
 }
 
-.footer-placeholder-list {
-    color: rgba(166, 167, 188, 0.3);
+.btn-soporte:hover i {
+    animation: pulseIcon 1s infinite alternate;
 }
 
-#carousel-SubCategorias {
-    max-height: 350px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-#carousel-SubCategorias img {
-    height: 350px;
-    object-fit: cover; /* tipo banner */
-}
-
-/* Oscurecer un poco para que se vea más elegante */
-.carousel-item::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.3);
-}
-
-/* Botones más visibles */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 50%;
-    padding: 15px;
+@keyframes pulseIcon {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
 }
