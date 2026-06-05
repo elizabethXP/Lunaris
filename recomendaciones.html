@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/css/recomendaciones.css">
     <link rel="icon" href="assets/img/luna.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
                 </div>
 
                 <ul class="menu">
-                    <li><a href="#">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
 
                     <li class="Drop-Categorias">
                         <a href="#">Categorías ▾</a>
@@ -63,7 +64,10 @@
 
                 <div class="buscador">
                     <input type="text" placeholder="Buscar">
-                    <i class="fa-regular fa-user"></i>
+
+                    <a href="perfil.html">
+                        <img src="assets/img/mitsuri.jpg" alt="Perfil" class="icono-perfil">
+                    </a>
                 </div>
 
             </nav>
@@ -242,37 +246,53 @@
 
     </main>
 
-    <footer class="custom-footer">
+<!-- FOOTER -->
+    <footer class="footer-lunaris">
         <div class="container">
             <div class="row text-center text-md-start">
-                
-                <div class="col-md-4 mb-4 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
-                    <div class="footer-logo-box text-center mb-2">
-                    </div>
-                    
-                    <h3 class="fw-bold m-0 footer-title">Lunaris</h3>
-                    <small class="footer-subtitle">"Where Passions Shine"</small>
+
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h3>Lunaris</h3>
+                    <p class="tagline">"Where Passions Shine"</p>
                 </div>
 
-                <div class="col-md-4 mb-4 mb-md-0">
-                    <h3 class="fw-bold mb-3 footer-section-title">Navegación</h3>
-                    <ul class="list-unstyled lh-lg">
-                        <li><a href="#" class="footer-link">Inicio</a></li>
-                        <li><a href="#" class="footer-link">Categorías</a></li>
-                        <li><a href="#" class="footer-link">Destacados</a></li>
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h4>Navegación</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="categorias.html">Categorías</a></li>
+                        <li><a href="destacados.html">Destacados</a></li>
                     </ul>
                 </div>
 
-                <div class="col-md-4">
-                    <h3 class="fw-bold mb-3 footer-section-title">Categorías Relevantes</h3>
-                    <ul class="list-unstyled lh-lg footer-placeholder-list">
-                        <li>Anime</li>
-                        <li>Videojuegos</li>
-                        <li>Libros</li>
+                <div class="col-md-4 mb-4 mb-md-0 text-center">
+                    <h4>Categorías Relevantes</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="anime.html">Anime</a></li>
+                        <li><a href="videojuegos.html">Videojuegos</a></li>
+                        <li><a href="libros.html">Libros</a></li>
                     </ul>
                 </div>
 
             </div>
+
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <div class="soporte-container">
+                        <a href="recomendaciones.html" class="btn-soporte" title="Soporte Técnico">
+                            <i class="fa-solid fa-headset"></i>
+                            <span>Soporte Técnico</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                    <p class="copyright">&copy; 2026 Lunaris. Derechos Reservados.</p>
+                </div>
+            </div>
+
         </div>
     </footer>
 
