@@ -730,4 +730,27 @@ body {
     .Titulo h1{
         font-size:22px;
     }
+
+    /* Ocultar categorías */
+.columna a{
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    transition: 0.3s;
+}
+
+/* Mostrar cuando se hace clic */
+.columna.active a{
+    max-height: 50px;
+    padding: 6px 0;
+}
+
+.columna h2{
+    cursor: pointer;
+    padding: 10px;
+    background: #1a1a35;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
 }

@@ -567,4 +567,20 @@ body{
     .Titulo h1{
         font-size:22px;
     }
+
+    .columna a{
+    display: none;
+}
+
+.columna.active a{
+    display: block;
+}
+
+.columna h2{
+    cursor: pointer;
+    padding: 10px;
+    background: #1a1a35;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
 }

@@ -379,5 +379,17 @@
         menu.classList.toggle("active");
     });
 </script>
+
+<script>
+    const columnas = document.querySelectorAll(".columna");
+
+    columnas.forEach(columna => {
+        const titulo = columna.querySelector("h2");
+
+        titulo.addEventListener("click", () => {
+            columna.classList.toggle("active");
+        });
+    });
+</script>
     </body>
 </html>
