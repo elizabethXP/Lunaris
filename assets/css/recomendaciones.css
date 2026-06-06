@@ -289,6 +289,14 @@ body {
     padding-left: 4px;
 }
 
+/* Botón hamburguesa */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#E8C39E;
+    cursor:pointer;
+}
+
 /* ==========================================
    RESTO DE COMPONENTES (Mantenidos)
    ========================================== */
@@ -654,4 +662,95 @@ body {
     margin: 0;
     border-top: 1px solid #1f1542;
     padding-top: 15px;
+}
+
+/* ==========================
+   TABLET Y MOVIL
+========================== */
+
+@media (max-width: 992px){
+
+    .navbar-lunaris{
+        flex-wrap:wrap;
+        padding:15px 20px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    .menu{
+        display:none;
+        flex-direction:column;
+        width:100%;
+        gap:15px;
+        margin-top:20px;
+        text-align:center;
+    }
+
+    .menu.active{
+        display:flex;
+    }
+
+    .buscador{
+        width:100%;
+        justify-content:center;
+        margin-top:15px;
+    }
+
+    .buscador input{
+        width:100%;
+        max-width:300px;
+    }
+
+    /* Dropdown categorías */
+
+    .drop-content{
+        position:static;
+        transform:none;
+        min-width:100%;
+        flex-direction:column;
+        gap:15px;
+        margin-top:10px;
+
+        opacity:1;
+        visibility:visible;
+        display:none;
+    }
+
+    .Drop-Categorias:hover .drop-content{
+        display:flex;
+    }
+
+    .logo img{
+        width:80px;
+        height:60px;
+    }
+
+    .Titulo h1{
+        font-size:22px;
+    }
+
+    /* Ocultar categorías */
+.columna a{
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+    padding: 0;
+    transition: 0.3s;
+}
+
+/* Mostrar cuando se hace clic */
+.columna.active a{
+    max-height: 50px;
+    padding: 6px 0;
+}
+
+.columna h2{
+    cursor: pointer;
+    padding: 10px;
+    background: #1a1a35;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
 }

@@ -128,6 +128,14 @@ body {
     transform: translateX(-50%) translateY(0);
 }
 
+/* Botón hamburguesa */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#E8C39E;
+    cursor:pointer;
+}
+
 /* Columnas */
 .columna {
     display: flex;
@@ -434,151 +442,6 @@ body {
     padding-top: 15px;
 }
 
-/* =========================
-    TABLETS (<= 992px)
-========================= */
-@media (max-width: 992px) {
-
-    /* Navbar */
-    .navbar-lunaris {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
-    }
-
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .buscador input {
-        width: 180px;
-    }
-
-    /* Dropdown categorías */
-    .drop-content {
-        flex-direction: column;
-        min-width: 100%;
-        gap: 20px;
-        left: 0;
-        transform: none;
-    }
-
-    /* Carruseles */
-    #carousel-Tendencias img,
-    #carousel-SubCategorias img {
-        height: 250px;
-    }
-
-    /* Botón del banner */
-    .carousel-overlay button {
-        font-size: 16px;
-        padding: 8px 20px;
-    }
-}
-
-
-/* =========================
-   CELULARES (<= 768px)
-========================= */
-@media (max-width: 768px) {
-
-    /* Navbar */
-    .logo img {
-        width: 80px;
-        height: 60px;
-    }
-
-    .Titulo h1 {
-        font-size: 22px;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .buscador {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .buscador input {
-        width: 100%;
-    }
-
-    /* Cards */
-    .card-categoria {
-        margin-bottom: 20px;
-    }
-
-    .card-categoria .card-img-top {
-        height: 150px;
-    }
-
-    /* Carruseles */
-    #carousel-Tendencias,
-    #carousel-SubCategorias {
-        max-height: 250px;
-    }
-
-    #carousel-Tendencias img,
-    #carousel-SubCategorias img {
-        height: 250px;
-    }
-
-    /* Overlay botón */
-    .carousel-overlay {
-        top: 60%;
-    }
-
-    .carousel-overlay button {
-        font-size: 14px;
-        padding: 8px 18px;
-        margin-top: 20px;
-    }
-}
-
-
-/* =========================
-    CELULARES PEQUEÑOS (<= 480px)
-========================= */
-@media (max-width: 480px) {
-
-    /* Navbar */
-    .navbar-lunaris {
-        width: 95%;
-        padding: 15px;
-    }
-
-    /* Texto */
-    .Titulo h1 {
-        font-size: 18px;
-    }
-
-    .Titulo p {
-        font-size: 10px;
-    }
-
-    /* Carrusel */
-    #carousel-Tendencias img,
-    #carousel-SubCategorias img {
-        height: 200px;
-    }
-
-    /* Botón banner */
-    .carousel-overlay button {
-        font-size: 12px;
-        padding: 6px 15px;
-    }
-
-    /* Footer */
-    .footer-lunaris {
-        text-align: center;
-    }
-
-    .footer-links {
-        padding: 0;
-    }
+/* ==========================
+   TABLET Y MOVIL
 }
