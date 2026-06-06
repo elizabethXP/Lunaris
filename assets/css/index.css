@@ -128,6 +128,14 @@ body {
     transform: translateX(-50%) translateY(0);
 }
 
+/* Botón hamburguesa */
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:#E8C39E;
+    cursor:pointer;
+}
+
 /* Columnas */
 .columna {
     display: flex;
@@ -274,7 +282,76 @@ body {
 
 /* Seccion de "Podria Interesarte" */
 
+/* Carrusel Principal */
 
+#carousel-Tendencias {
+    max-height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#carousel-Tendencias img {
+    height: 350px;
+    object-fit: cover; 
+}
+
+/* Carrusel de Sub-Categorias*/
+
+#carousel-SubCategorias {
+    max-height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#carousel-SubCategorias img {
+    height: 350px;
+    object-fit: cover; 
+}
+
+/* Oscurecer un poco para que se vea más elegante */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+/* Botones más visibles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.carousel-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.carousel-overlay button {
+    font-size: 18px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: #7B5CB7;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+    margin-top: 90px;
+}
+
+.carousel-overlay button:hover {
+    background-color: #A488D9;
+}
 
 /* Footer */
 
@@ -349,6 +426,9 @@ body {
     animation: bounceHeadset 0.6s infinite alternate;
 }
 
+
+/*Responsive*/ 
+
 @keyframes bounceHeadset {
     from { transform: translateY(0); }
     to { transform: translateY(-3px); }
@@ -360,4 +440,8 @@ body {
     margin: 0;
     border-top: 1px solid #1f1542;
     padding-top: 15px;
+}
+
+/* ==========================
+   TABLET Y MOVIL
 }

@@ -21,7 +21,9 @@
                         <p>"Where Passions Shine"</p>
                     </div>
                 </div>
-
+                <div class="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
                 <ul class="menu">
                     <li><a href="index.html">Inicio</a></li>
 
@@ -93,13 +95,13 @@
             <div id="carousel-Tendencias" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="assets/img/luna.png" class="d-block w-100" alt="...">
+                        <img src="assets/img/banner_principal.jfif" class="d-block w-100" alt="banner_anime" data-bs-interval="10000">
                     </div>
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="assets/img/banner_anime.png" class="d-block w-100" alt="banner_anime" data-bs-interval="6000">
                     </div>
                     <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                        <img src="assets/img/banner_literatura.jpg" class="d-block w-100" alt="banner_literatura" data-bs-interval="6000">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel-Tendencias" data-bs-slide="prev">
@@ -219,7 +221,7 @@
                     <div class="row mt-4">
 
                         <div class="col-md-3">
-                            <div class="card card-tendencia">
+                            <div class="card card-categoria">
                                 <img src="assets/img/asta.jpeg" class="card-img-top" alt="asta">
                                 <div class="card-body">
                                     <h3>Black Clover, TERMINA!!</h3>
@@ -234,7 +236,7 @@
                         </div>
 
                         <div class="col-md-3">
-                            <div class="card card-tendencia">
+                            <div class="card card-categoria">
                                 <img src="assets/img/gta6.avif" class="card-img-top" alt="gta6">
                                 <div class="card-body">
                                     <h3>GTA 6, ¿Para 2026?</h3>
@@ -250,7 +252,7 @@
                         </div>
 
                         <div class="col-md-3">
-                            <div class="card card-tendencia">
+                            <div class="card card-categoria">
                                 <img src="assets/img/ajedrez.jpg" class="card-img-top" alt="ajedrez">
                                 <div class="card-body">
                                     <h3>Mejores movimientos</h3>
@@ -265,7 +267,7 @@
                         </div>
 
                         <div class="col-md-3">
-                            <div class="card card-tendencia">
+                            <div class="card card-categoria">
                                 <img src="assets/img/series.webp" class="card-img-top" alt="series">
                                 <div class="card-body">
                                     <h3>Series para ver con lluvia</h3>
@@ -286,7 +288,6 @@
                                 </button>
                             </div>
                         </div>
-
                     </div>
                 </section>
             </div>
@@ -294,14 +295,21 @@
             <!-- Carrusel, SubCategorias -->
             <div id="carousel-SubCategorias" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="assets/img/luna.png" class="d-block w-100" alt="...">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="assets/img/banner_subcategorias.png" class="d-block w-100" alt="banner_subcategorias">
+
+                    <!-- Botón centrado -->
+                        <div class="carousel-overlay">
+                            <button class="btn ver-mas-categorias-btn">
+                                Crear SubCategoria
+                            </button>
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="assets/img/banner_crochet.png" class="d-block w-100" alt="banner_crochet">
                     </div>
-                    <div class="carousel-item">
-                        <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="assets/img/banner_cosplay.png" class="d-block w-100" alt="banner_cosplay">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carousel-SubCategorias" data-bs-slide="prev">
@@ -363,5 +371,25 @@
     </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+    });
+</script>
+
+<script>
+    const columnas = document.querySelectorAll(".columna");
+
+    columnas.forEach(columna => {
+        const titulo = columna.querySelector("h2");
+
+        titulo.addEventListener("click", () => {
+            columna.classList.toggle("active");
+        });
+    });
+</script>
     </body>
 </html>
